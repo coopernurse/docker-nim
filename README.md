@@ -1,6 +1,8 @@
 
 ## Overview
 
+NOTE: The image has moved to: https://registry.hub.docker.com/u/coopernurse/docker-nim/
+
 This is a quick attempt to get the Nim compiler and nimble package manager
 bundled into a Docker image.
 
@@ -24,9 +26,9 @@ compiler directly without changing directory first.
 By using the `-v` flag with `docker run` you can use this image to compile your Nim sources without
 a local Nim installation.  For example, to compile and run `hello.nim` from this repo:
 
-    docker run --rm -v `pwd`:/src coopernurse/nim nim c -r --verbosity:0 hello.nim
+    docker run --rm -v `pwd`:/src coopernurse/docker-nim nim c -r --verbosity:0 hello.nim
 
 Or to compile to a binary:
 
-    docker run --rm -v `pwd`:/src coopernurse/nim nim c hello.nim
+    docker run --rm -v `pwd`:/src coopernurse/docker-nim nim c hello.nim
 
