@@ -3,7 +3,7 @@ FROM alpine:3.1
 ENV PATH=$PATH:/opt/Nim/bin:/root/.nimble/bin
 
 RUN apk update && \
-    apk add libc-dev gcc curl libgcc git && \
+    apk add libc-dev gcc curl libgcc git perl && \
 	mkdir -p /opt && cd /opt && \
 	git clone https://github.com/Araq/Nim.git && \
 	cd Nim && sh build.sh && cd /opt && \
